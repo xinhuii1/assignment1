@@ -127,19 +127,3 @@ form {
     background-color: #555;  /* when hover, darker background is shown */
 }
 
-.form-container .no-account-text {
-    text-align: center;
-    margin-top: 15px; /* Space between the button and the text */
-    font-size: 15px;
-    color: #333;
-}
-
-.form-container .no-account-text a {
-    color: #916537; 
-    text-decoration: none; /* Remove underline from the link */
-}
-
-.form-container .no-account-text a:hover {
-    text-decoration: underline; /* underline on hover */
-}
-
