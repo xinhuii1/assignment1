@@ -100,3 +100,112 @@ body {
     background-color: #3a2016;
 }
 
+.book-promotion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.book-display {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.book-promotion .book-display img {
+    width: 220px;
+    height: 340px;
+    object-fit: cover;
+    border: 1px solid #333;
+    margin: 10px;
+    background-color: #BC966E;
+
+}
+
+.offer-box {
+    padding: 30px; /* Adds space inside the box */
+    text-align: center; /* Centers the text */
+    background-color: #BC966E;
+    max-width: 300px;
+}
+
+.offer-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 32px;
+}
+
+.offer-box p {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+    
+}
+
+.offer-box .button.order-now {
+    display: inline-block; /* Ensures button stays inline */
+    margin-top: 10px; /* Adds space above the button */
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: #BC966E;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.button.order-now:hover{
+    background-color: #704026;
+}
+
+.writer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1b9a0;
+    padding: 40px;
+    gap: 30px;
+    width: 100%;
+}
+
+.writer-books {
+    flex: 1;
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    font-family: 'Inria Serif', serif;  /* Use a proper font-family declaration */
+}
+
+.writer-books h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    background-color: #A87B68;
+}
+
+.writer-books p {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.writer-books .button.join-now {
+    font-size: 30px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #d1b9a0 ;
+    border: 1px solid #fff;
+
+}
+
+.book img {
+    width: 220px;
+    height: 340px;
+    object-fit: cover;
+    border: 1px solid #333;
+    margin: 10px;
+    object-fit: cover;
+}
