@@ -14,7 +14,7 @@ body {
 .header-container {
     background-color: #f8eacb;
     width: 100%;
-    padding: 30px 0;
+    padding: 30px ;
     border-bottom: 1px solid black; /* black underline */
     display: flex;
     justify-content: flex-start; /* align items to the left */
@@ -125,5 +125,21 @@ form {
 
 .form-container .btn:hover {
     background-color: #555;  /* when hover, darker background is shown */
+}
+
+.form-container .no-account-text {
+    text-align: center;
+    margin-top: 15px; /* Space between the button and the text */
+    font-size: 15px;
+    color: #333;
+}
+
+.form-container .no-account-text a {
+    color: #916537; 
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.form-container .no-account-text a:hover {
+    text-decoration: underline; /* underline on hover */
 }
 
