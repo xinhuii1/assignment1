@@ -1,3 +1,4 @@
+/* body styling */
 body {
     font-family: 'Kaisei Decol', serif;
     margin: 0;
@@ -17,19 +18,6 @@ body {
     border-bottom: 1px solid black; /* black underline */
     display: flex;
     justify-content: flex-start; /* align items to the left */
-    align-items: center;
-}
-
-.logo-container {
-    text-align: center;
-    margin-left: 30px;
-}
-
-.logo-text {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
 }
 
 /* header logo */
@@ -38,28 +26,48 @@ body {
     height: 100px;
     border-radius: 50%; /* Circular logo */
     object-fit: cover;
+    margin-left: 30px;
 }
 
+.separator {
+    height: 50px;  /* Height of the separator */
+    background-color: white; /* White background */
+    width: 100%;  /* Full width of the page */
+}
+
+/* logo section */
+.logo-container {
+    text-align: center;
+    margin-left: 30px;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: bold; /* make text bold */
+    color: #333;
+    margin-top: 10px;
+}
 
 /* Navigation Links */
 .nav {
-    display: flex;
+    display: flex; /* use flexbox for the nav links  */
     gap: 50px;
     padding: 60px;
     align-items: center;
 }
 
+/* Navigation Links styling */
 .nav a {
     font-family: 'Kaisei Decol', serif;
     color: #333;
-    text-decoration: none;
+    text-decoration: none; /* removes underline from links */
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
 .nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* add underline when hovered over */
 }
 
 /* Header Buttons */
@@ -67,17 +75,17 @@ body {
     display: flex;
     gap: 30px; /* Space between buttons */
     align-items: center;
-    margin-left: 250px;
-    margin-bottom: 30px;
+    margin-left: auto; /* push buttons to the far right */
+
+
 }
 
 .button {
     padding: 10px 20px; /* Adjust padding for larger clickable area */
-    border: none;
-    border-radius: 20px;
+    border: none; /* remove border around the buttons */
+    border-radius: 20px; /* round corners */
     color: #fff;
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth hover effect */
 }
@@ -100,77 +108,60 @@ body {
     background-color: #3a2016;
 }
 
-.book-promotion {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-}
-
-.book-display {
-    display: flex;
-    gap: 20px;
-    
-}
-
-.book-promotion .book-display img {
-    width: 220px;
-    height: 340px;
-    object-fit: cover;
-    border: 1px solid #333;
-    margin: 10px;
-    background-color: #BC966E;
-
-}
-
-.offer-box {
-    padding: 30px; /* Adds space inside the box */
-    text-align: center; /* Centers the text */
-    background-color: #BC966E;
-    max-width: 300px;
-}
-
-.offer-box h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: white;
-    font-size: 32px;
-}
-
-.offer-box p {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #fff;
-    
-}
-
-.offer-box .button.order-now {
-    display: inline-block; /* Ensures button stays inline */
-    margin-top: 10px; /* Adds space above the button */
-    padding: 10px 20px;
-    font-size: 30px;
-    background-color: #BC966E;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    border: 1px solid #fff;
-}
-
-.button.order-now:hover{
-    background-color: #704026;
-}
-
-.writer-box {
+/* bestseller section style */
+.bestseller-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #d1b9a0;
+    background-color: #BC966E;
     padding: 40px;
     gap: 30px;
-    width: 100%;
+    width: 100%; /* Ensure containers fit within viewport */
+    overflow: hidden; /* Prevent horizontal overflow */
+}
+
+.bestseller-books {
+    flex: 1; /* allows test to take up remaining space */
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    font-family: 'Inria Serif', serif;  
+    display: flex;
+    flex-direction: column; /* arrange in a verticle column */
+    align-items: center;
+}
+
+.bestseller-books h2 {
+    font-size: 32px;
+    margin-top: auto; /* push item down  */
+    background-color: #A87B68;
+    padding: 10px;
+    width:100%;
+}
+
+.bestseller-books p {
+    font-size: 32px;
+    margin-bottom: 45px;
+}
+
+.bestseller-books .button.order-now {
+    font-size: 30px;
+    padding: 10px 30px;
+    border-radius: 30px; /* round button corners */
+    background-color: #BC966E ;
+    border: 1px solid #fff; /* white border around the button  */
+}
+
+/* writers section style  */
+.writer-box {
+    display: flex;
+    justify-content: space-between; /* Space out the content between text and images */
+    align-items: center;
+    background-color: #D1B9A0;
+    padding: 40px;
+    gap: 30px;
+    width: 100%; /* Ensure containers fit within the full width */
+    overflow: hidden; /* Prevent horizontal overflow */
 }
 
 .writer-books {
@@ -178,18 +169,23 @@ body {
     text-align: center;
     font-size: 32px;
     color: white;
-    font-family: 'Inria Serif', serif;  /* Use a proper font-family declaration */
+    font-family: 'Inria Serif', serif;  
+    flex-direction: column;
+    align-items: center;
 }
 
-.writer-books h3 {
+.writer-books h2 {
     font-size: 32px;
-    margin-bottom: 10px;
-    background-color: #A87B68;
+    margin-top: auto; /* push item down */
+    background-color: #A87B68; /* Background color to match the bestseller h2 */
+    padding: 10px; /* Padding to create space inside the border */
+    width: 600%; 
+    text-align: center; /* Center align the text */
 }
 
 .writer-books p {
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .writer-books .button.join-now {
@@ -198,14 +194,50 @@ body {
     border-radius: 30px;
     background-color: #d1b9a0 ;
     border: 1px solid #fff;
+    margin-top: 30px;
 
 }
 
-.book img {
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0; /* remove margin */
+    padding: 0; /* remove padding */
+    width: 100%;
+}
+
+/* prevent elements from overflowing  */
+* {
+    max-width: 100%; /* Prevent elements from overflowing */
+    box-sizing: border-box; /* Ensure padding and border are within width */
+}
+
+
+.books img, .book img {
     width: 220px;
-    height: 340px;
+    height: 365px;
     object-fit: cover;
     border: 1px solid #333;
     margin: 10px;
-    object-fit: cover;
+}
+
+.container {
+    width: 100%; /* Prevent containers from exceeding viewport width */
+}
+
+.writer-box .button.join-now {
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.writer-box .button.join-now:hover {
+    background-color: rgba(76, 44, 30, 0.5); /* Transparent color on hover */
+}
+
+.bestseller-box .button.order-now {
+    color: #ffffff; /* Text color */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.bestseller-box .button.order-now:hover {
+    background-color:  rgba(76, 44, 30, 0.5); /* Transparent color on hover */
 }
