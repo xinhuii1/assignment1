@@ -442,4 +442,36 @@ h2 {
     background-color: #d2b38c;
 }
 
+form {
+    padding: 30px;
+    
+}
+
+.formbox {
+    margin-top: 5px;
+    background-color: #fff;
+    border: 0px solid #333;
+    border-radius: 20px;   /* gives the form slightly rounded corners */
+    padding: 20px 20px;
+    width: 450px;
+    box-shadow: 0 1px 6px rgba(0.1, 0.1, 0.1);  /* adds a subtle shadow around form for a lifted effect */
+    height: 380px;
+    display: flex;
+    flex-direction: column;  /* arrange elements vertically */
+}
+
+.btn {
+    background-color: #D1B9A0;
+    color: white;
+    padding: 20px 40px;
+    margin: 8px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 28px;
+    font-family: 'Inria Serif', serif;  
+    width: 100%;
+    height: 80px;
+    white-space: nowrap; /* prevent text wrapping so that my text can have one line */ 
+}
 
