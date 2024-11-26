@@ -370,6 +370,7 @@ html, body {
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
     width: 80%;
+    height: 100%;
     text-align: center;
     margin: 0;
 }
@@ -382,25 +383,37 @@ html, body {
     background-color: #916537;
     height: 60px;
     width: 100%;
+    align-items: center;
 }
 
-/* Specific Color for My Books */
-.tabs .tab.my-books {
-    background-color: #F5E7CA; /* Example color for 'My Books' */
-    color: #333;
+/* active tab styles */
+.tabs .tab.active {
+    font-weight: bold;
+    color: #916537;
+    background-color: #F5E7CA;
 }
 
-/* Specific Color for Archived */
-.tabs .tab.archived {
-    background-color: #FBEAC9; 
-    color: #333;
+/* inactive tab styles */
+.tabs .tab:not(.active) {
+    opacity: 0.6; /* make inactive tabs slightly transparent */
 }
 
 /* Specific Color for Booklists */
+.tabs .tab.my-books,
+.tabs .tab.archived,
 .tabs .tab.booklists {
-    background-color: #FCF4E5; 
+    background-color: #FBEAC9; 
     color: #333;
+    font-size: 20px;
 }
+
+/* hover and underline will appear */
+.tabs .tab.booklists:hover,
+.tabs .tab.archived:hover,
+.tabs .tab.my-books:hover {
+    text-decoration: underline #333;
+}
+
 
 .book-section {
     margin: 40px 20px;
@@ -474,4 +487,168 @@ form {
     height: 80px;
     white-space: nowrap; /* prevent text wrapping so that my text can have one line */ 
 }
+
+nav {
+    background-color: #916537;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 60px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Inria Serif', serif; 
+    font-size: 28px;
+    
+}
+
+nav a:hover {
+    color: #333;
+}
+
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-right: auto;
+}
+.nav-category {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D1B9A0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    padding: 0 60px;
+}
+
+.nav-category a {
+    display: block;
+    padding: 20px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    text-align: left;
+}
+
+.nav-category a:hover {
+    color: black;
+}
+
+.ranking {
+    margin: 30px;
+    border: none;
+    width: 100%;
+    background-color: #A87768;
+}
+
+.ranking h1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;  
+}
+
+.books-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 10px 20px; 
+
+}
+
+.ranking-book {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(50% - 20px);  /* Make each book take up 50% of the container width */
+}
+
+.ranking-book:nth-child(1)
+{
+    order: 1;
+}
+
+.ranking-book:nth-child(4)
+{
+    order: 2;
+    margin-left: 20px;
+}
+
+.ranking-book:nth-child(2)
+{
+    order: 3;
+    flex-basis: 100%; /* forces this book to take up the whole row */
+}
+
+.ranking-book:nth-child(3)
+{
+    order: 4;
+    flex-basis: 100%;
+}
+
+.ranking-book img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.ranking-book h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Inria Sans', sans-serif;
+    text-align: left;
+}
+
+.ranking-book h3 .ranking-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: #4C2C1E;
+}
+
+.book-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+.book-info h3 {
+    font-size: 16px;
+    margin-bottom: 10px; /* ensure theres no space above the title */
+    font-family:'Inria Sans', sans-serif; 
+    text-align: left;
+
+}
+
+/* targets the first part of p which is author */
+.book-info p:first-of-type {
+    font-size: 15px;
+    color: #666;
+    margin: 0;
+    text-decoration: none; 
+    margin-left: 30px;
+}
+
+.book-info p:first-of-type:hover{
+    text-decoration: underline;  /* underline when hover */
+    color: #333;
+}
+
+/* targets the last part of p which is synopsis */
+.book-info p:last-of-type 
+{
+    font-size: px;
+    color: black;
+    margin: 0;
+    margin-left: 30px;
+
+}
+
 
