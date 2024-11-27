@@ -605,8 +605,15 @@ form {
     white-space: nowrap; /* prevent text wrapping so that my text can have one line */ 
 }
 
-/* Responsive design */
-/* Mobile-specific styles */
+.formbox .btn:hover{
+    background-color: #4C2C1E;
+}
+
+.formbox-rectangle {
+    display: none;
+}
+
+/* Mobile view */
 @media (max-width: 768px) {
     .header-container {
         padding: 20px;
@@ -634,12 +641,14 @@ form {
     }
 
     body {
+        font-family: 'Inria Serif', serif;
         background-color: transparent;
     }
+
     .form-container {
         max-width: 90%;
         padding: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Remove shadow for mobile */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
         background-color: white;
         margin-top: -5px;
     }
@@ -680,5 +689,128 @@ form {
     .form-container .no-account-text a {
         font-size: 14px;
     }
-}
 
+
+    /* write page */
+    .write-page .header-container {
+        padding: 60px;
+        background-color: #BC966E; 
+        display: flex;
+        border: none;
+        height: auto;
+        width: 100%;
+        margin-left: 41px;
+    }
+
+    .write-page .header-container img {
+        display: none;
+    }
+
+    .write-page .header-container::before {
+        content: "Write";
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-top: 20px;
+        position: absolute;
+        text-align: center;
+        font: 'Kaisei Decol'
+        
+    }
+
+    .write-page .formbox {
+        max-width: 90%;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for form */
+        background-color: white;
+        margin-top: 5%;
+        border-bottom: 2px solid #D1B9A0; /* Add border below the form */
+    }
+    
+    .write-page .formbox button {
+        width: 100%;
+        padding: 12px;
+        font-size: 26px;
+        margin-bottom: 20px;
+        background-color: #D1B9A0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 15px;
+        border: 1px solid black;
+        transition: background-color 0.3s;
+    }
+
+    .write-page .formbox button:hover {
+        background-color: #d2b38c;
+    }
+
+    .write-page h1 {
+        font-size: 28px;
+        font-weight: light;
+        text-align: center;
+        margin-top: 150px;
+        color: black;
+        display: block;
+    }
+
+    .write-page .formbox-rectangle {
+        width: 100%;
+        padding: 25px;
+        background-color: #4C2C1E;
+        display: block;
+        margin-top: auto;
+        color: white;
+        text-align: center;
+    }
+
+    .write-page .rectangle-nav {
+        list-style: none; /* removes bulletpoints */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .write-page .rectangle-nav li {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .write-page .rectangle-nav a {
+        text-decoration: none;  /* removes underlines */
+        color: white;
+        transition: color 0.3s;  /* smooth color change on hover */
+    }
+
+    .write-page .rectangle-nav a:hover {
+        color:rgba(76, 44, 30, 0.5);
+    }
+
+    .bookmark-page .header-container {
+        padding: 60px;
+        background-color: #BC966E; 
+        display: flex;
+        border: none;
+        height: auto;
+        width: 100%;
+        margin-left: 41px;
+    }
+
+    .bookmark-page .header-container img {
+        display: none;
+    }
+
+    .bookmark-page .header-container::before {
+        content: "My Bookmarks";
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-top: 20px;
+        position: absolute;
+        text-align: center;
+        font: 'Kaisei Decol'
+    }
+
+}
+    
