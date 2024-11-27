@@ -24,7 +24,7 @@
         
         <p>*indicates required field</p>
 
-        <form>
+        <form action="#" method="POST">
             <!-- First Name field -->
             <label for="firstname">FIRST NAME:</label>
             <input type="text" id="firstname" name="firstname" required>
@@ -35,11 +35,11 @@
 
            <!-- Email Field -->
            <label for="email">EMAIL ADDRESS:</label>
-           <input type="text" id="email" name="email" required>
+           <input type="email" id="email" name="email" required>
 
            <!-- Password Field -->
            <label for="password">PASSWORD:</label>
-           <input type="password" id="password" name="password" required>
+           <input type="password" id="password" name="password" required minlength="8" placeholder="At least 8 characters">
 
             <!-- Options -->
             <div class="options">
