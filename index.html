@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linked CSS -->
+
+    <link rel="stylesheet" href="css/normalize.css"> <!-- integrated normalize CSS -->
+    <link rel="stylesheet" href="css/index.css"> <!-- Linked CSS -->
 </head>
 <body>
-
     <!-- Header Section: contains the website's logo, nav and sign in/join now buttons -->
     <header class="header-container">
         <div class="logo-container">
@@ -15,7 +16,7 @@
             <img src="images/logo.webp" alt="Library Co. Logo">
             <p class="logo-text">Library Co.</p> 
         </div>
-        
+
         <!-- Navigation Links -->
         <nav class="nav"> 
             <a href="bookmark.html">Bookmarks</a> <!-- Links to bookmarks section -->
@@ -25,30 +26,37 @@
 
         <!-- Header Buttons -->       
         <div class="header-buttons">
-            <a href="login.html">
-                <button class="button sign-in">Sign In</button> 
-            </a>
-            <a href="create.html">
-                <button class="button join-now">Join Now</button>
-            </a>
+            <a href="login.html" class="button sign-in">Sign In</a>
+            <a href="create.html" class="button join-now">Join Now</a>
         </div>
     </header>
 
+    <div class="welcome-box">
+        <p>Welcome Back to Library Co.</p>
+    </div>
+
+    <h2 class="mobile-heading">Genres You Love</h2>
+
+    <!-- Navigation Links for mobile -->
+    <nav class="nav-mobile">
+        <a href="bookmark.html">Bookmarks</a> <!-- Links to bookmarks section -->
+        <a href="bestseller.html">Bestsellers</a> <!-- Links to bestsellers section -->
+        <a href="write.html">Write</a> <!-- Links to write section -->
+    </nav>
+
     <!-- Separator between sections -->
     <div class="separator"></div>
-   
+
     <!-- main content -->
     <main>
-
         <!-- Bestsellers Section -->
         <section class="bestseller-box">
             <div class="books">
                 <!-- Bestselling books images -->
-                <img src="images/book2.jpg" alt="Cover of Bestselling Book 2">
-                <img src="images/book1.jpg" alt="Cover of Bestselling Book 2">
-                <img src="images/book3.jpg" alt="Cover of Bestselling Book 2">
+                <img src="images/books/book2.jpg" alt="Cover of Bestselling Book 2">
+                <img src="images/books/book1.jpg" alt="Cover of Bestselling Book 2">
+                <img src="images/books/book3.jpg" alt="Cover of Bestselling Book 2">
             </div>
-
             <div class="bestseller-books">
                 <h2>Enjoy our bestsellers books at 15% off right now</h2>
                 <p>Now you can easily order books for your favourite bestselling authors at Library Co.</p>
@@ -67,15 +75,45 @@
             </div>
             <div class="book">
                 <!-- images of book from successful writers -->
-                <img src="images/book4.jpg" alt="Cover of Book 4">
-                <img src="images/book5.jpg" alt="Cover of Book 5">
-                <img src="images/book6.jpg" alt="Cover of Book 6">
+                <img src="images/books/book4.jpg" alt="Cover of Book 4">
+                <img src="images/books/book5.jpg" alt="Cover of Book 5">
+                <img src="images/books/book6.jpg" alt="Cover of Book 6">
+            </div>
+        </section>
+
+        <div class="separator"></div>
+        
+        <!-- genres section -->
+        <section class="genres-container">
+            <div class="genre-item">
+                <img src="images/genre/romance-button.jpg" alt="Romance-button">
+                <p>ROMANCE</p>
+            </div>
+            <div class="genre-item">
+                <img src="images/genre/mystery-button.jpg" alt="mystery-button">
+                <p>MYSTERY</p>
+            </div>
+            <div class="genre-item">
+                <img src="images/genre/sciencefiction-button.webp" alt="sciencefiction-button">
+                <p>SCIENCE FICTION</p>
+            </div>
+            <div class="genre-item">
+                <img src="images/genre/historical-button.jpg" alt="historical-button">
+                <p>HISTORICAL</p>
+            </div>
+            <div class="genre-item">
+                <img src="images/genre/fantasy-button.webp" alt=" fantasy-button">
+                <p>FANTASY</p>
+            </div>
+            <div class="genre-item">
+                <img src="images/genre/action-button.png" alt="action-button">
+                <p>ACTION</p>
             </div>
         </section>
     </main>
 
-
     <div class="separator"></div>
+
     <!-- footer Section -->
      <footer class="footer-container">
         <div class="footer-content">
@@ -112,12 +150,22 @@
                 <p>Find a store nearest to you:</p>
                 <a href="#">Click here!</a>
              </div>
-            </div>
 
             <!-- Footer Bottom -->
             <div class="footer-bottom">
                 <p>&copy; 2024 Library Co. All rights reserved.</p>
             </div>
-        </footer>
+        </div>
+    </footer>
+
+    <!-- New rectangular box below the form -->
+    <div class="formbox-rectangle">
+        <ul class="rectangle-nav">
+            <li><a href="index.html">home</a></li>
+            <li><a href="write.html">write</a></li>
+            <li><a href="bestseller.html">bestseller</a></li>
+        </ul>
+    </div>
+<script src="js/index.js"></script> <!-- Linked JavaScript -->
 </body>
 </html>

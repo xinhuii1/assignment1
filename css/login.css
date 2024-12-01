@@ -1,0 +1,257 @@
+/* body styling */
+body {
+    font-family: 'Kaisei Decol', serif;
+    margin: 0;
+    background-color: #ffffff; /* white background */
+    display: flex;
+    flex-direction: column; /* arranges child element vertically in a column */
+    align-items: center;
+    justify-content: flex-start; /* arranges child elements at the top of the page */
+    min-height: 100vh; /* ensures the body takes up full viewport height */
+}
+
+/* Header Section */
+.header-container {
+    background-color: #f8eacb;
+    width: 100%;
+    padding: 30px ;
+    border-bottom: 1px solid black; /* black underline */
+    display: flex;
+    justify-content: flex-start; /* align items to the left */
+}
+
+/* header logo */
+.header-container img {
+    width: 110px;
+    height: 100px;
+    border-radius: 50%; /* Circular logo */
+    object-fit: cover;
+    margin-left: 30px;
+}
+
+/* header title */
+.header-container h1 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.logo-container p 
+{
+    margin-left: 45px;
+    margin-top: auto;
+    font-weight: bold;
+}
+
+/* Form Section */
+form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures the form content takes up available space and pushes the button down */
+}
+
+.form-container {
+    margin-top: 6px;
+    background-color: #fff;
+    border: 0px solid #333;
+    border-radius: 20px;   /* gives the form slightly rounded corners */
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 1px 6px rgba(0.1, 0.1, 0.1);  /* adds a subtle shadow around form for a lifted effect */
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;  /* arrange elements vertically */
+}
+
+/* form title */
+.form-container h2 {
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-container p {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.form-container label {
+    display: block;
+    font-size: 15px;
+    color:  #333;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1.5px solid #333;  /* adds a solid dark grey border */
+    border-radius: 10px;  /* rounded corner */
+}
+
+input::placeholder {
+    color: grey;
+}
+
+/* sign in button */
+.form-container .btn {
+    display: block;
+    font-family: 'Inria Serif', serif;  /* Use a proper font-family declaration */
+    width: 30%;
+    height: 0%;
+    background-color: #916537;
+    color: #fff;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.form-container .btn-container {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-container .btn:hover {
+    background-color: #555;  /* when hover, darker background is shown */
+}
+
+.form-container .no-account-text {
+    text-align: center;
+    margin-top: 50px; /* Space between the button and the text */
+    font-size: 15px;
+    color: #333;
+}
+
+.form-container .no-account-text a {
+    color: #916537; 
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.form-container .no-account-text a:hover {
+    text-decoration: underline; /* underline on hover */
+}
+
+/* options section */
+.form-container .options {
+    display: flex;
+    justify-content: space-between;  /* spaces element equally */
+    font-size: 15px;
+}
+
+.form-container .options a {
+    color: black;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.form-container .options a:hover {
+    text-decoration:  underline; /* underline on hover */
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    margin: 0; /* remove margin */
+    padding: 0; /* remove padding */
+    width: 100%;
+}
+
+/* prevent elements from overflowing  */
+* {
+    max-width: 100%; /* Prevent elements from overflowing */
+    box-sizing: border-box; /* Ensure padding and border are within width */
+}
+
+@media (max-width: 768px) {
+
+    .header-container {
+        color: transparent; /* only want the logo img to appear */
+        background-color: white;
+        border: none;
+        margin-left: 50%;
+        margin-top: 30%;
+    }
+
+    h1 {
+        display: none;
+    }
+
+
+    
+    body {
+        font-family: 'Inria Serif', serif;
+        background-color: transparent;
+    }
+
+    .form-container {
+        max-width: 90%;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+        background-color: white;
+        margin-top: -5px;
+    }
+
+
+    .form-container h2 {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .form-container label {
+        font-size: 14px;
+    }
+
+    .form-container p {
+        font-size: 20px;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+        padding: 15px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 25px;
+    }
+
+    .form-container .btn {
+        width: 100%; /* Full width on mobile */
+        padding: 12px;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .form-container .no-account-text {
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .options label {
+        font-size: 18px;
+    }
+
+    .options input[type="checkbox"] {
+        width: 20px;
+        height: 15px;
+        cursor: pointer;
+    }
+
+    .form-container .btn-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .form-container .btn:hover {
+        background-color: #555;  /* when hover, darker background is shown */
+    }
+}

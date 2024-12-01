@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Write Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linked CSS -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- integrated normalize CSS -->
+    <link rel="stylesheet" href="css/write.css"> <!-- Linked CSS -->
 </head>
 <body class="write-page">
 
     <!-- Header Section: contains the website's logo  -->
     <header class="header-container write-header">
+        <button class="exit-scroll-arrow">←</button>
         <div class="logo-container">
             <!-- Library Co. Logo -->
             <img src="images/logo.webp" alt="Library Co. Logo">
@@ -22,21 +24,24 @@
     <!-- Form Section -->
      <div class="formbox write-formbox">
         <form>
-           <button class="btn">Create Story</button>
-           <button class="btn">Tutorial and Guide</button>
-           <button class="btn">Read Other Writer's Book</button>
+           <button class="btn" type="button">Create Story</button>
+           <button class="btn" type="button">Tutorial and Guide</button>
+           <button class="btn" type="button">Read Other Writer's Book</button>
         </form>
      </div>
 
 
      <!-- New rectangular box below the form -->
-     <div class="formbox-rectangle">
+     <nav class="formbox-rectangle">
         <ul class="rectangle-nav">
             <li><a href="index.html">home</a></li>
             <li><a href="write.html">write</a></li>
             <li><a href="bestseller.html">bestseller</a></li>
         </ul>
-     </div>
+    </nav>
+
+<!-- linked to my write js  -->
+<script src="js/write.js"></script> 
 </body>
 </html>
 

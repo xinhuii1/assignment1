@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Sign In Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linked CSS -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- integrated normalize CSS -->
+    <link rel="stylesheet" href="css/login.css"> <!-- Linked CSS -->
 </head>
 <body>
     <!-- Header Section: contains the website's logo  -->
@@ -23,7 +24,7 @@
         
         <p>*indicates required field</p>
 
-        <form>
+        <form id="login-form">
             <!-- Email Field -->
             <label for="email">EMAIL ADDRESS:</label>
             <input type="text" id="email" name="email" required>
@@ -42,7 +43,7 @@
 
             <!-- sign in Button -->
             <div class="btn-container">
-                <button type="submit" class="btn">Sign in</button>
+                <button type="submit" class="btn sign-in">Sign in</button>
             </div>
 
             <!-- No Account Text -->
@@ -52,5 +53,8 @@
 
         </form>
     </div>
+
+<!-- linked to my login js  -->
+<script src="js/login.js"></script> 
 </body>
 </html>

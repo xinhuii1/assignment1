@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bookmark Page</title>
-    <link rel="stylesheet" href="style.css"> <!-- Linked CSS -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- integrated normalize CSS -->
+    <link rel="stylesheet" href="css/bookmark.css"> <!-- Linked CSS -->
 </head>
-<body class="bookmark-page">
+<body>
     <!-- Header Section: contains the website's logo and header-->
     <header class="header-container bookmark-header">
+        <button class="exit-scroll-arrow">←</button>
         <div class="logo-container">
             <!-- Library Co. Logo -->
             <img src="images/logo.webp" alt="Library Co. Logo">
@@ -23,18 +25,15 @@
         <a href="#booklists" class="tab booklists">Booklists</a>
     </nav>
 
-    <!-- linked to js file Bar -->
-    <script src="script.js" defer></script>
-
     <!-- Offline Books Section -->
     <section class ="book-section">
         <h2 class="section-title">OFFLINE BOOKS</h2>
         <hr>
         <div class="book-grid">
-            <img src="images/book1.jpg" alt="Cover of offline Book 1">
-            <img src="images/book2.jpg" alt="Cover of offline Book 2">
-            <img src="images/book3.jpg" alt="Cover of offline Book 3">
-            <img src="images/book5.jpg" alt="Cover of offline Book 5">
+            <img src="images/books/book1.jpg" alt="Cover of offline Book 1">
+            <img src="images/books/book2.jpg" alt="Cover of offline Book 2">
+            <img src="images/books/book3.jpg" alt="Cover of offline Book 3">
+            <img src="images/books/book5.jpg" alt="Cover of offline Book 5">
             <button class="scroll-arrow">→</button>
         </div>
         <hr>
@@ -42,16 +41,37 @@
 
     <!-- Other Books Section -->
     <section class="book-section">
-        <h2 class="section-title">OTHER BOOKS</h2>
+        <h2 class="section-title">BOOKMARKS</h2>
         <hr>
         <div class="book-grid">
-            <img src="images/book6.jpg" alt="Cover of other Book 6">            
-            <img src="images/book7.jpg" alt="Cover of other Book 7">
-            <img src="images/book8.jpg" alt="Cover of other Book 8">
-            <img src="images/book9.jpg" alt="Cover of other Book 9">
+            <img src="images/books/book6.jpg" alt="Cover of other Book 6">            
+            <img src="images/books/book7.jpg" alt="Cover of other Book 7">
+            <img src="images/books/book8.jpg" alt="Cover of other Book 8">
+            <img src="images/books/book9.jpg" alt="Cover of other Book 9">
+            <button class="scroll-arrow">→</button>
+        </div>
+        <p></p>
+        <div class="book-grid repeat">
+            <img src="images/books/book6.jpg" alt="Cover of other Book 6">            
+            <img src="images/books/book7.jpg" alt="Cover of other Book 7">
+            <img src="images/books/book8.jpg" alt="Cover of other Book 8">
+            <img src="images/books/book9.jpg" alt="Cover of other Book 9">
             <button class="scroll-arrow">→</button>
         </div>
         <hr>
     </section>
+
+    
+    <!-- New rectangular box below the form -->
+    <div class="formbox-rectangle">
+        <ul class="rectangle-nav">
+            <li><a href="index.html">home</a></li>
+            <li><a href="write.html">write</a></li>
+            <li><a href="bestseller.html">bestseller</a></li>
+        </ul>
+    </div>
+
+<!-- linked to my bookmark js  -->
+<script src="js/bookmark.js"></script> 
 </body>
 </html>
